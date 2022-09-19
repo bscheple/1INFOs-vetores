@@ -4,11 +4,20 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2).
 
     //ENTRADA
-
+    const numero1 = Number(prompt("Envie um número:"))
+    const numero2 = Number(prompt("Envie mais um número:"))
+    let fim = []
 
     //PROCESSAMENTO
-
+    if (numero1 < numero2) {
+        fim.push(numero1);
+        fim.push(numero2);
+    } else if (numero2 < numero1) {
+        fim.push(numero2);
+        fim.push(numero1);
+    } else (Erro)
 
     //SAÍDA
-    
+    alert(fim.join(" - "))
+
 </script>
