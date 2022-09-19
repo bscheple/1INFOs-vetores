@@ -4,11 +4,38 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-
+    const N1 = Number(prompt("Envie um número:"))
+    const N2 = Number(prompt("Envie um segundo número:"))
+    const N3 = Number(prompt("Envie um terceiro número:"))
+    let fim = []
 
     //PROCESSAMENTO
-
+    if (N1 > N2 && N1 > N3 && N2 > N3) {
+        fim.push(N3)
+        fim.push(N2)
+        fim.push(N1)
+    } else if (N1 > N2 & N1 > N3 && N3 > N2) {
+        fim.push(N3)
+        fim.push(N2)
+        fim.push(N1)
+    } else if (N2 > N1 & N2 > N3 && N1 > N3) {
+        fim.push(N3)
+        fim.push(N1)
+        fim.push(N2)
+    } else if (N2 > N1 & N2 > N3 && N3 > N1) {
+        fim.push(N1)
+        fim.push(N3)
+        fim.push(N2)
+    } else if (N3 > N1 & N3 > N2 && N2 > N1) {
+        fim.push(N1)
+        fim.push(N2)
+        fim.push(N3)
+    } else if (N3 > N1 & N3 > N1 && N1 > N2) {
+        fim.push(N2)
+        fim.push(N1)
+        fim.push(N3)
+    } 
 
     //SAÍDA
-
+    alert(fim.join(" - "))
 </script>
